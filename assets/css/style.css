@@ -1,0 +1,416 @@
+@import '../css/owl.carousel.min.css';
+@import '../css/owl.theme.default.min.css';
+@import '../css/fonts.css';
+/*Google fonts*/
+
+/*Reset CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	 font-family: 'EB Garamond';
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a,
+a:hover,
+a:visited,
+a:active {
+	text-decoration: none;
+	outline: none;
+}
+
+/*Main CSS*/
+.container {
+	width: 100%;
+	max-width: 1440px;
+}
+header {
+	position: relative;
+}
+header .hamburger {
+	z-index: 24;
+	position: absolute;
+	left: 15px;
+	top: 16px;
+	display: none;
+}
+header .hamburger i {
+	cursor: pointer;
+	font-size: 30px;
+	color: #fff;
+}
+header .owl-carousel .item {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+header .owl-carousel .item:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+}
+header .main_nav {
+	position: absolute;
+	top: 16px;
+	left: 15px;
+	right: 0;
+	z-index: 22;
+}
+header .main_nav ul li {
+	position: relative;
+	display: inline-block;
+	margin-right: 30px;
+}
+header .main_nav ul li:before {
+	content: '/';
+	position: absolute;
+	right: -20px;
+	top: 5px;
+	color: #fff;
+}
+header .main_nav ul li:last-child:before {
+	content: none;
+}
+header .main_nav ul li a {
+	position: relative;
+	color: #fff;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 400;
+}
+header .main_nav ul li a:before {
+	content: '';
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	opacity: 0;
+	transition: 0.3s;
+}
+header .main_nav ul li a:hover:before {
+	opacity: 1;
+	bottom: -5px;
+}
+header h1 {
+	position: absolute;
+	top: 172px;
+	width: 100%;
+	max-width: 630px;
+	color: #fff;
+	font-size: 72px;
+	line-height: 86px;
+	letter-spacing: -2px;
+	z-index: 22;
+	font-weight: 300;
+}
+header .owl-nav .owl-prev {
+	position: absolute;
+	left: 75px;
+	top: 50%;
+	color: #fff;
+	font-size: 50px!important;
+}
+header .owl-nav i {
+	color: #fff;
+}
+header .owl-nav i.fa-arrow-left-long {
+	display: none;
+}
+header .owl-nav .owl-next {
+	position: absolute;
+	right: 75px;
+	top: 50%;
+	color: #fff;
+	font-size: 50px!important;
+}
+.owl-theme .owl-dots {
+	position: absolute;
+	left: 250px;
+	bottom: 75px;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+	background: #fff;
+}
+.owl-theme .owl-dots .owl-dot span {
+	width: 15px;
+	height: 15px;	
+	background: transparent;
+	border: 1px solid #fff;
+}
+#our_jewelry {
+	position: relative;
+	top: -10px;
+	padding: 100px 0;
+	background: linear-gradient(180deg, #D6F1FA 0%, #C5EAF7 100%);
+	overflow: hidden;
+}
+#our_jewelry:before {
+	content: '';
+    position: absolute;
+    top: 365px;
+    right: 50px;
+    width: 1300px;
+    height: 1000px;
+    background: linear-gradient(102.77deg, rgba(197, 234, 246, 0) -6.69%, rgba(122, 177, 194, 0.7) 47.23%);
+    opacity: 0.15;
+    transform: rotate(-230deg);
+}
+#our_jewelry h2 {
+	font-weight: 400;
+	font-size: 64px;
+	letter-spacing: -2px;
+	margin-bottom: 16px;
+}
+#our_jewelry p {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 26px;
+	width: 100%;
+	max-width: 350px;
+}
+#our_jewelry img.rotating {
+  animation: rotating 7s linear infinite;
+  margin-top: 30px;
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#our_jewelry .absoBox {
+	position: absolute;
+	right: -250px;
+	display: flex;
+	justify-content: space-between;
+}
+#our_jewelry .absoBox img {
+	width: 100%;
+	height: auto;
+	margin-right: 20px;
+}
+#best_seller {
+	padding: 50px 0;
+}
+#best_seller article {
+	position: relative;
+}
+#best_seller article:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #333;
+	opacity: 0;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	transition: 0.3s;
+}
+#best_seller article:hover:after {
+	opacity: 0.4;
+	width: 100%;
+	height: 100%;
+}
+#best_seller article:before {
+	content: 'Best seller';
+	position: absolute;
+	top: 18px;
+	left: 0;
+	width: 92px;
+	height: auto;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	color: #fff;
+	font-weight: 400;
+	z-index: 2;
+	background: #000;
+}
+#best_seller img {
+	width: 100%;
+	height: auto;
+}
+#best_seller h3 {
+	font-size: 18px;
+	font-weight: 500;
+	color: #222;
+	padding: 10px 0;
+}
+#best_seller p {
+	font-size: 18px;
+	font-weight: 400;
+	color: #848484;
+}
+@media only screen and (max-width: 1200px) {
+	header h1 {
+		max-width: 800px;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+	.owl-theme .owl-dots {
+		left: 0;
+		right: 0;
+		bottom: 30px;
+	}
+	header .owl-nav .owl-prev,
+	header .owl-nav .owl-next {
+		bottom: 50px;
+		top: inherit;
+	}
+	#our_jewelry .absoBox {
+		right: 0;
+		position: relative;
+	}
+	#our_jewelry .absoBox img {
+	    max-width: 300px;
+	    margin: 10px auto;
+	    display: block;
+	    height: 450px;
+	}
+	#our_jewelry .col-lg-4 {
+		text-align: center;
+	}
+	#our_jewelry p {
+		margin: 0 auto;
+		text-align: center;
+		max-width: 600px;
+	}
+}
+@media only screen and (max-width: 992px) {
+	header .hamburger {
+		display: block;
+	}
+	header .main_nav {
+		display: none;
+	    background: #d6f1fa;
+	    left: 0;
+	    top: 0;
+	    z-index: 23;
+	    text-align: center;
+	}
+	header .main_nav ul li {
+		display: block;
+		margin: 30px auto;
+	}
+	header .main_nav ul li:before {
+		content: none;
+	}
+	header .main_nav ul li a {
+		color: #000;
+	}
+	#best_seller {
+		padding: 0;
+	}
+	#best_seller article {
+	    position: relative;
+	    width: 100%;
+	    max-width: 400px;
+	    margin: 10px auto;
+	    border: 2px solid #000;
+	    border-radius: 3px;
+	    text-align: center;
+	    padding-bottom: 10px;
+	}
+	#our_jewelry {
+		padding: 30px 0;
+	}
+	#our_jewelry .absoBox {
+		display: block;
+	}
+	header h1 {
+		max-width: 100%;
+	    top: 100px;
+	    line-height: normal;
+	    font-size: 40px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	header .owl-nav i {
+		display: none;
+	}
+}
+@media only screen and (max-width: 550px) {
+	header h1 {
+		letter-spacing: 1px;
+		font-size: 26px;
+		top: 80px;
+	}
+	.owl-theme .owl-dots {
+		bottom: 0;
+	}
+	#our_jewelry .absoBox img {
+		height: auto;
+	}
+}
